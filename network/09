@@ -1,0 +1,8 @@
+# Trouver l’IP Publique de 42.fr
+
+# COMMAND :
+# nslookup 42.fr 8.8.8.8
+
+# OUTPUT :
+echo 163.172.250.13
+echo 163.172.250.12

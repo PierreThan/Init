@@ -1,0 +1,10 @@
+# Identifiez l’adresse MAC de la carte Wi-Fi
+
+# INFO :
+# Your network card has a MAC address.
+# So if you have a wireless card and an Ethernet card, you'll have two MAC addresses.
+# en0 = physical network interfaces. (Ethernet)
+# en1 = airport (wifi card)
+
+# COMMAND :
+ifconfig en1 | grep ether | awk '{print $2}'

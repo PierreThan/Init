@@ -1,0 +1,9 @@
+# Quelle commande permet de renommer votre système ?
+
+# use the hostname command to see or set the system’s host name.
+# The host name or computer name is usually at system startup in /etc/hostname file
+
+# type : hostname <new-name>
+
+# COMMAND :
+hostname

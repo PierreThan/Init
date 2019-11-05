@@ -1,0 +1,17 @@
+# Trouvez grâce au résultat de la commande précédente le nom et l’IP du matériel
+# qui fait le lien entre vous (réseau local) et l’extérieur
+
+# DEDUCTION :
+# Network address translation :
+# method of remapping one IP address space into another by modifying network address information
+# in the IP header of packets while they are in transit across a traffic routing device.
+
+# after running the traceroute :
+# the 1st line is the local IP address
+# the 2nd line : nat1 is the NAT router who makes the link between you (local network) and the outside world
+# the 3rd line : the host of our public IP address
+
+## COMMAND :
+traceroute slash16.org | grep nat-1
+
+# output : nat-1 (10.60.1.11)  -> nat server

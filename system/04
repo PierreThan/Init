@@ -1,0 +1,14 @@
+# Quelle commande donne le temps depuis lequel votre système à été démarré la
+# dernière fois ?
+
+# You need to use the who command, to print who is logged on.
+# It also displays the time of last system boot.
+
+# who -- display who is logged in
+# The who utility displays a list of all users currently logged on, showing
+# for each user the login name, tty name, the date and time of login, and
+# hostname if not local.
+# -b    Time of last system boot.
+
+# COMMAND :
+who -b

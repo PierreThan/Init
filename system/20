@@ -1,0 +1,5 @@
+# Listez tout les utilisateurs existants sur la machine
+
+# COMMAND :
+cat /etc/passwd | awk -F ':' '{print $1}'
+# OR : cut -d : -f 1 /etc/passwd

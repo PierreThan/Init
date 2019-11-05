@@ -1,0 +1,14 @@
+# Grâce a la question précédente et au reverse DNS retrouvez le nom de votre host
+
+# COMMAND :
+# ipconfig getoption en0 server_identifier
+# nslookup {result of previous command} or host {result of previous command}
+
+# OUTPUT :
+echo Server:		10.51.1.42
+echo Address:		10.51.1.42#53
+echo
+echo 253.1.51.10.in-addr.arpa		name = dhcp.42.fr.
+
+# DEDUCTION:
+# host is dhcp.42.fr

@@ -1,0 +1,77 @@
+## CREATE GITHUB REPO 
+
+# get user name
+username=`git config github.user`
+if [ "$username" = "" ]; then
+    echo "Could not find username, run 'git config --global github.user <username>'"
+    invalid_credentials=1
+fi
+
+# get repo name
+dir_name=`basename $(pwd)`
+read -p "Do you want to use '$dir_name' as a repo name?(y/n)" answer_dirname
+case $answer_dirname in
+  y)
+    # use currently dir name as a repo name
+    reponame=$dir_name
+    ;;
+  n)
+    read -p "Enter your new repository name: " reponame
+    if [ "$reponame" = "" ]; then
+        reponame=$dir_name
+    fi
+    ;;
+  *)
+    ;;
+esac
+
+# create repo
+echo "Creating Github repo '$reponame' ..."
+curl -u $username https://api.github.com/user/repos -d '{"name":"'$reponame'"}' >> /dev/null
+echo "done."
+
+# create empty README.md
+echo "README ..."
+touch README.md
+echo "done."
+
+# init repo
+git init
+
+# .gitgnore
+read -p "Create .gitignore ? (y/n)" answer
+
+case $answer in 
+ y)
+ 	touch .gitignore
+	;;
+ n)
+ 	;;
+ *)
+ 	;;
+esac
+
+# commit message
+git add -A >>/dev/null
+read -p "Commit message: " commitMessage
+git commit -m "$commitMessage"
+
+# push to remote repo
+git remote rm origin
+git remote add origin https://github.com/$username/$reponame.git >> /dev/null
+git push -u origin master >> /dev/null
+echo "done."
+
+# open in a browser
+read -p "Open github page of repo ?(y/n): " answer_browser
+
+case $answer_browser in
+  y)
+    echo "Opening ..."
+    open https://github.com/$username/$reponame
+    ;;
+  n)
+    ;;
+  *)
+    ;;
+esac

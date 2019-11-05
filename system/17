@@ -1,0 +1,11 @@
+# Trouvez une commande qui, en parallèle de la session graphique, permet de se
+# connecter en ssh sur la machine
+
+# VirtualBox -> create private network which will be connecter to your host network
+# using NAT
+# therefore -> cannot directly access any host of the private network from the
+# host network. VirtualBox
+# acces it through your localhost -> 127.0.0.1
+
+# COMMAND :  ssh <user>@<ip-address-or-hostname>
+ssh pthan@127.0.0.1

@@ -1,0 +1,16 @@
+# 14. Quel est le fichier contenant les entrées locales DNS ?
+
+# INFO :
+# The hosts file is used to map hostnames (in other words domains) to IP addresses.
+# With the hosts file you can change the IP address that you resolve a given domain name to.
+# This change only affects your own computer without affecting how the domain is resolved worldwide.
+# This is particularly useful when you wish to see how a website will look like when hosted
+# on a different server without making any DNS changes to your domain.
+
+# in Linux -> /etc/hosts
+
+# Therefore the file that contains the Domain Name Sytem is the /etc/hosts
+# here it has localhost and broadcasthost
+
+# COMMAND :
+/etc/host

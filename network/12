@@ -1,0 +1,29 @@
+# Trouvez l’IP qui vous a été assignée par le serveur dhcp
+
+# INFO :
+# DHCP server :
+# network server that automatically provides and assigns IP addresses,
+# default gateways and other network parameters to client devices.
+# It relies on the standard protocol known as Dynamic Host Configuration Protocol
+# or DHCP to respond to broadcast queries by clients.
+# A DHCP server automatically sends the required network parameters for clients
+# to properly communicate on the network. Without it, the network administrator
+# has to manually set up every client that joins the network, which can be cumbersome,
+# especially in large networks. DHCP servers usually assign each client with a unique
+# dynamic IP address, which changes when the client’s lease for that IP address has expired
+
+# ipconfig : view and control IP configuration state
+# utility that communicates with the IPConfiguration agent to retrieve and set IP configuration parameters.
+# (internet protocol configuration) is a console application of some operating systems that displays
+# all current TCP/IP  network configuration values and refresh Dynamic Host Configuration Protocol
+# (DHCP) and Domain Name System (DNS) settings.
+# (TCP = Transmission Control Protocol)
+
+# ipconfig getoption interface-name (option-name | option-code)
+#    Prints the BOOTP/DHCP option with the given name or option code integer value.
+
+# we want to apply ipconfig getoption on en0 (your physical network interfaces)
+# and retrieve the server_identifier
+
+# COMMAND :
+ipconfig getoption en0 server_identifier

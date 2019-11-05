@@ -1,0 +1,7 @@
+# Quelle commande permet de savoir quelles personnes sont connectées sur le système ?
+
+# INFO :
+# w -- display who is logged in and what they are doing
+
+# COMMAND:
+w

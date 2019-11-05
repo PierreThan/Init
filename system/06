@@ -1,0 +1,5 @@
+# SUBJECT :
+# Name the command that reboots the SSH service.
+
+# COMMAND :
+systemctl restart ssh

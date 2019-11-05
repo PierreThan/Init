@@ -1,0 +1,14 @@
+# Listez les services qui se lancent automatiquement lorsque la machine boot et
+# indiquez le nom donné à ce type de service
+
+# systemctl command, which is the central management tool for controlling the init system
+# To see a list of all of the active units that systemd knows about, we can use the list-units command
+
+# list-unit-files
+# The list-units command only displays units that systemd has attempted to parse and load into memory.
+# Since systemd will only read units that it thinks it needs, this will not necessarily include all of
+# the available units on the system. To see every available unit file within the systemd paths, including
+# those that systemd has not attempted to load, you can use the list-unit-files command instead
+
+# COMMAND :
+systemctl list-unit-files --type=service | grep "enabled" | awk -F'.service' '{print $1}'

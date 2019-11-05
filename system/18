@@ -1,0 +1,5 @@
+# Donnez une commande qui permet d’arrêter le service ssh
+
+# COMMAND:
+systemctl stop ssh
+# or sudo service ssh stop

@@ -1,0 +1,9 @@
+# Listez tout les utilisateurs réels de la machine
+
+# Currently existing human users on the system will have home directories in /home,
+# but you may see the home directories of past users who were removed, as well.
+
+# COMMAND :
+cat /etc/passwd | grep '/home/' | awk -F':' '{print $1}'
+
+# or ls /home

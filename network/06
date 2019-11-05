@@ -1,0 +1,25 @@
+# Récupérez le path complet du fichier dans lequel est écrit l’adresse IP du serveur
+# DNS que vous utilisez
+
+# INFO :
+# How do you find out DNS server IP address? How do you find out current DNS server IP address?
+# Under Linux, FreeBSD and all UNIX-like operating systems you have a file called /etc/resolv.conf.
+# It is often known as the resolver configuration file.
+
+# resolv.conf - resolver configuration file
+
+# The resolver is a set of routines in the C library that provide access to the
+# Internet Domain Name System (DNS). The resolver configuration file contains information
+# that is read by the resolver routines the first time they are invoked by a process.
+# The file is designed to be human readable and contains a list of keywords with values that
+# provide various types of resolver information. The configuration file is considered a
+# trusted source of DNS information
+
+# DEDUCTION :
+
+# /etc/resolv.conf will give you the IP address of the DNS server you are using
+# when typing ls -l /etc/resolv.conf, we get :
+# lrwxr-xr-x  1 root  wheel  22 Nov 20  2016 /etc/resolv.conf -> ../var/run/resolv.conf
+# this is a symbolic link
+
+/var/run/resolv.conf

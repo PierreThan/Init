@@ -1,0 +1,12 @@
+# Quelle commande permet d’afficher l’espace disponible et utilisé sur le système
+# d’une manière humainement compréhensible ? ?
+
+# df
+# df displays the amount of disk space available on the file system containing each
+# file name argument.  If no file name is given, the space available on all currently
+# mounted file systems is shown.
+
+# df -H : print sizes in powers of 1000 (e.g., 1.1G)
+
+# COMMAND:
+df -H

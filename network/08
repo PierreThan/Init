@@ -1,0 +1,15 @@
+# Trouver chez quel hébergeur est le site de Slash16
+
+# INFO:
+
+# whois : Internet domain name and network number directory service
+#         type whois, and give it a domain name to look up.
+
+# use whois to search for the domain name,
+# then search the server name -> grep "Name Server:"
+
+# COMMAND :
+whois slash16.org | grep "Name Server:" | awk '{print $3}'
+
+# DEDUCTION :
+AWS

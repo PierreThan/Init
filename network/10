@@ -1,0 +1,31 @@
+# Identifiez les différents appareils réseaux entre votre poste et le domaine slash16.org
+
+# INFO :
+# traceroute : print the route packets take to network host
+# The traceroute command is used in Linux to map the journey that a
+# packet of information undertakes from its source to its destination.
+# One use for traceroute is to locate when data loss occurs throughout
+# a network, which could signify a node that's down.
+# Because each hop in the record reflects a new server or router between
+# the originating PC and the intended target, reviewing the results of a
+# traceroute scan also lets you identify slow points that may adversely affect
+# your network traffic.
+
+# INFO :
+# traceroute outputs :
+# Each row represents a "hop" along the route.
+# Think of it as a check-in point where the signal gets its next set of directions.
+
+# format is : Hop #	RTT 1	RTT 2	RTT 3	Name/IP Address
+# Hop Number - This is the first column and is simply the number of the hop along the route
+
+# RTT Columns - The next three columns display the round trip time (RTT) for your packet to
+# reach that point and return to your computer. This is listed in milliseconds.
+# There are three columns because the traceroute sends three separate signal packets.
+
+# Domain/IP column - The last column has the IP address of the router.
+
+# nat1 is the NAT router who makes the link between you (local network) and the outside world
+
+# COMMAND :
+traceroute slash16.org

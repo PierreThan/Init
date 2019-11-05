@@ -1,0 +1,19 @@
+# Quelle commande permet de lister tout les packages INSTALLÉS sur la machine ?
+
+# You might already know that Ubuntu is derived from Debian Linux.
+# And Debian uses dpkg packaging system. A packaging system is a way to provide programs and applications for installation.
+# This way, you don’t have to build a program from the source code which, trust me, is not a pretty way to handle packages.
+
+# APT (Advanced Package Tool) is the command line tool to interact with the packaging system.
+# There is already dpkg commands to manage it. But APT is a more friendly way to handle packaging.
+# You can use it to find and install new packages, upgrade packages, remove the packages etc.
+
+# apt list (work-in-progress)
+#   list is somewhat similar to dpkg-query --list in that it can display a list of packages satisfying certain criteria.
+#         It supports glob(7) patterns for matching package names as well as options to list installed (--installed),
+#         upgradeable (--upgradeable) or all available (--all-versions) versions.
+
+# list all installed packages -> list --installed
+
+# COMMAND :
+apt list --installed

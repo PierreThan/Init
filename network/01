@@ -1,0 +1,33 @@
+# Récupérez la liste des interfaces réseau de la machine sans afficher aucun détail
+# pour ces interfaces. Vraiment juste la liste des noms.
+
+# INFO :
+
+# ifconfig is a command line interface tool for network interface configuration
+# and also used to initialize an interfaces at system boot time.
+
+# Once a server is up and running, it can be used to assign an IP Address
+# to an interface and enable or disable the interface on demand.
+# It is also used to view the status IP Address, Hardware / MAC address,
+# as well as MTU (Maximum Transmission Unit) size of the currently active interfaces.
+# ifconfig is thus useful for debugging or performing system tuning.
+#
+# The -a flag may be used instead of an interface name. This flag
+# instructs ifconfig to display information about all interfaces in the system.
+
+# The -l flag may be used to list all available interfaces on the system, with
+# no other additional information :
+#		1: lo 	 	– Loopback interface.
+#       2: gif0  	- Generic tunnel interface. It's used to tunnel IPv4 traffic to an IPv6 network and back.
+#       3: stf0  	- IPv6 to IPv4 ("six to four") tunnel interface : It's a bridge connection that exists to help us transition from IPv4 to the IPv6 standard.
+#       4: XHC20 	- USB network interface
+#		5: en0   	– Ethernet network interface (cable).
+#		6: ppp0		– Point to Point Protocol network interface which can be used by dial up modem, PPTP vpn connection, or 3G wireless USB modem.
+#       7: p2p0		- Airdrop interface (apple p2p)  p2p0 is a point to point link (usually VPN)
+#       8: awdl0	- Apple Wireless Direct Link (Bluetooth) to iOS devices
+#		9: en1		– AirPort network interface (wifi).
+#      10: bridge0	- Software bridge between other interfaces
+#      11: utun0	- Used for "Back to My Mac"
+
+# COMMAND :
+ifconfig -l

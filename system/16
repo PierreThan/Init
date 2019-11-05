@@ -1,0 +1,13 @@
+# Trouvez un service qui permet de lancer des tâches à horaires régulières
+
+# INFO :
+# If you've got a website that's heavy on your web server, you might want to run some processes
+# like generating thumbnails or enriching data in the background.
+# This way it can not interfere with the user interface. Linux has a great program for this called cron.
+# It allows tasks to be automatically run in the background at regular intervals.
+# You could also use it to automatically create backups, synchronize files, schedule updates, and much more.
+
+
+#  crontab : used to schedule commands to be executed periodically.
+
+# DEDUCTION : Use crontab (cron) -> time-based job scheduler.   (sudo crontab -l)

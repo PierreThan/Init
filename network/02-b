@@ -1,0 +1,5 @@
+# Identifiez et affichez les caractéristiques de l’interface Ethernet :
+#   (b) Indiquez toutes les adresses IP qui font partie du même sous-réseau
+
+# COMMAND:
+ifconfig en0 | grep inet  | awk '{print $2}'

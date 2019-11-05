@@ -1,0 +1,7 @@
+# Quel est le fichier à modifier pour rendre cela permanent ?
+
+# Edit the file /etc/hostname :
+# Delete the existing name and replace it with a new name:
+# Save and close the file.
+# You may also need to edit the /etc/hosts file
+# after modifying restart system

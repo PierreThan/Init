@@ -1,0 +1,38 @@
+# Réalisez un script qui affiche seulement le login, le UID et le Path de chaques
+# entrée du fichier /etc/passwd
+
+# etc/passwd File Format :
+#   stores essential information, which is required during login
+#   i.e. user account information.
+#   /etc/passwd is a text file, which contains a list of
+#   the system’s accounts, giving for each account some
+#   useful information like user ID, group ID, home directory,
+#   shell, etc. It should have general read permission as
+#   many utilities like ls use it to map user IDs to user names,
+#   but write access only for the superuser/root account.
+#
+#   fields in /etc/passwd:
+#   The /etc/passwd contains one entry per line for each user
+#   (or user account) of the system. All fields are separated
+#   by a colon (:) symbol. Total of seven fields:
+#     - 1. username : used when user logs in
+#     - 2. password
+#     - 3. User ID (UID): Each user must be assigned a user ID (UID).
+#               UID 0 (zero) is reserved for root
+#               UIDs 1-99 are reserved for other predefined accounts.
+#               Further UID 100-999 are reserved by system for
+#               administrative and system accounts/groups.
+#     - 4. Group ID (GID): Primary group ID (store in /etc/group file)
+#     - 5. User ID Info : The comment field. It allow you to add
+#          extra information about the users such as user’s full name,
+#          phone number etc.
+#     - 6. Home directory: The absolute path to the directory the user
+#          will be in when they log in. If this directory does not
+#          exists then users directory becomes /
+#     - 7. Command/shell: The absolute path of a command or shel
+
+# awk -F
+# awk  - pattern-directed scanning and processing language
+# The -F fs option defines the input field  separator  to  be  the regular expression fs.
+
+awk -F ':' '{print $1 $3 $6}' /etc/passwd

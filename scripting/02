@@ -1,0 +1,13 @@
+# Réalisez un script qui permet de supprimer un user LOGUÉ sur la machine
+
+# INFO:
+# Remove an active user, pass it as the first parameter
+
+# add user   : sudo useradd <name>
+# check user : cat /etc/passwd | grep <name>
+# delete it with script : sh 02 test
+
+# COMMAND :
+USER=$1
+pgrep -u $USER | while read PID; do sudo kill $PID; done
+sudo userdel $USER exit 0

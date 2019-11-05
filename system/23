@@ -1,0 +1,6 @@
+# Expliquez comment se connecter en tant que ce nouvelle utilisateur. (En session
+graphique et en session ssh)
+
+# DEDUCTION :
+# Graphic : Put your login and password when asked -> sudo useradd <name>, then login via GUI(graphical user interface)
+# SSH : ssh <new_user>@<ip-address-or-hostname> -> then put password when asked
