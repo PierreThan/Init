@@ -61,17 +61,3 @@ git remote rm origin
 git remote add origin https://github.com/$username/$reponame.git >> /dev/null
 git push -u origin master >> /dev/null
 echo "done."
-
-# open in a browser
-read -p "Open github page of repo ?(y/n): " answer_browser
-
-case $answer_browser in
-  y)
-    echo "Opening ..."
-    open https://github.com/$username/$reponame
-    ;;
-  n)
-    ;;
-  *)
-    ;;
-esac
